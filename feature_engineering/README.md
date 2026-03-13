@@ -2,7 +2,7 @@
 
 ## Overview
 
-This module performs **feature engineering** on the cleaned transaction dataset to enhance the predictive capability of machine learning models used for financial fraud detection and anti–money laundering (AML) analysis.
+This module performs **feature engineering** on the cleaned transaction dataset to enhance the predictive capability of machine learning models used for financial fraud detection.
 
 The script transforms the raw transactional dataset into a richer dataset by deriving behavioral, temporal, statistical, and risk-based features.
 
