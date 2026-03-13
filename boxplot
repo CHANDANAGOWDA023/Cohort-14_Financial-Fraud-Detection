@@ -1,0 +1,9 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.boxplot(x='Is_laundering', y='Amount', data=df)
+
+plt.title("Transaction Amount vs Fraud")
+plt.xlabel("Fraud (1) vs Legitimate (0)")
+plt.ylabel("Amount")
+plt.show()
