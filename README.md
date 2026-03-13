@@ -144,12 +144,4 @@ pip install -r requirements.txt
 
 ---
 
-## Intended Audience
 
-This project is suitable for:
-
-- Students and practitioners learning **fraud detection and ML for tabular data**
-- Data scientists experimenting with **feature engineering and imbalance handling**
-- Teams prototyping **transaction monitoring** and **AML (Anti‑Money Laundering)** use cases
-
-Feel free to extend the notebooks, add new models, or integrate the pipeline into a production‑grade API.
