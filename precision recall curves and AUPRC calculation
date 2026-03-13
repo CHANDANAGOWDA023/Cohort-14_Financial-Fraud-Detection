@@ -1,0 +1,28 @@
+# ==========================================
+# 8. Precision-Recall Curves & AUPRC Calculation
+# ==========================================
+plt.figure(figsize=(10, 7))
+
+models_preds = {
+    'Logistic Regression': y_val_probs_lr,
+    'Random Forest': y_val_probs_rf,
+    'XGBoost': y_val_probs_xgb,
+    'Isolation Forest': y_val_scores_iso
+}
+
+for model_name, y_probs in models_preds.items():
+    precision, recall, _ = precision_recall_curve(y_val, y_probs)
+    pr_auc = auc(recall, precision)
+    auprc_scores[model_name] = pr_auc
+    plt.plot(recall, precision, label=f'{model_name} (AUPRC = {pr_auc:.3f})')
+
+plt.xlabel('Recall')
+plt.ylabel('Precision')
+plt.title('Precision-Recall Curve Comparison (Validation Set)')
+plt.legend(loc='upper right')
+plt.grid(True)
+plt.show()
+
+print("\nAUPRC Scores:")
+for model, score in auprc_scores.items():
+    print(f"{model}: {score:.4f}")
